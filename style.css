@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+body {
+  margin: auto;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  padding: 24px;
+  border: 1px solid;
+  width: 540px;
+  margin-top: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#profile {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+#profile .avatar {
+  width: 112px;
+  display: inline;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin: 8px auto 24px auto;
+}
+
+#container #buttonTheme {
+  background-color: #fff;
+  width: 64px;
+  height: 24px;
+  padding: 8px;
+  margin-bottom: 32px;
+}
+
+#links {
+  display: block;
+  margin: 10px;
+  border: 1px solid;
+}
+
+#links div {
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
