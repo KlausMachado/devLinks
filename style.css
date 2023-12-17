@@ -2,7 +2,7 @@
 
 body {
   margin: auto;
-  color: #fff;
+  color: var(--white);
   font-family: "Inter", sans-serif;
   background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
   display: flex;
@@ -47,7 +47,7 @@ body {
 /* buttonTheme - botão de tema */
 
 #container #buttonTheme {
-  background-color: #fff;
+  background-color: var(--white);
   width: 64px;
   height: 24px;
   padding: 8px;
@@ -65,7 +65,7 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 16px;
 }
 
 #links ul li a {
@@ -73,18 +73,24 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   font: 500 16px;
   border: 1px solid;
   padding: 16px 24px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px); /* da a impressão de embassado*/
+  -webkit-backdrop-filter: blur(4px);
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: background .3s;
 }
 
+#links ul li a:hover{
+  border: 1.5px solid var(--white);
+  background: rgba(255, 255, 255, 0.05);
+}
 
 /* socialLinks - redes sociais */
 #socialLinks a img {
-  background-color: #fff;
+  background-color: var(--white);
 }
