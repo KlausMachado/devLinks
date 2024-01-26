@@ -1,13 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
 
+
 body {
   margin: auto;
-  color: var(--white);
+  color: var(--text-color);
   font-family: "Inter", sans-serif;
-  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body.light {
+  --text-color: #000;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
 }
 
 /* container */
@@ -46,11 +56,22 @@ body {
 /* buttonTheme - botão de tema */
 
 #container #buttonTheme {
-  background-color: var(--white);
+  /* background-color: var(--text-color); */
   width: 64px;
   height: 24px;
   padding: 8px;
   margin-bottom: 32px;
+  text-decoration: none;
+}
+
+/* switch */
+#switch #buttonTheme {
+  width: 32px;
+  height: 32px;
+  background: white url(./assets/moon-stars.svg) no-repeat center;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
 }
 
 /* Links - lista */
@@ -65,6 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding: 0;
 }
 
 #links ul li a {
@@ -72,21 +94,21 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: var(--white);
+  color: var(--text-color);
   font: 500 16px;
   border: 1px solid;
   padding: 16px 64px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-color);
   backdrop-filter: blur(4px); /* da a impressão de embassado*/
   -webkit-backdrop-filter: blur(4px);
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  transition: background .3s;
+  border: 1px solid var(--stroke-color);
+  transition: background 0.3s;
 }
 
-#links ul li a:hover{
-  border: 1.5px solid var(--white);
-  background: rgba(255, 255, 255, 0.05);
+#links ul li a:hover {
+  border: 1.5px solid var(--text-color);
+  background: var(--surface-color-hover);
 }
 
 /* socialLinks - redes sociais */
@@ -98,18 +120,18 @@ body {
 
 #socialLinks a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
   border-radius: 50%;
 
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
 #socialLinks a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--highlight-color);
   padding: 16px;
 }
 
